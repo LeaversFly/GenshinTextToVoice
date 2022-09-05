@@ -15,7 +15,7 @@ const getData = () => {
         alert('请输入文本')
     else {
         const node = document.getElementsByTagName('audio')[0]
-        node.setAttribute('src', `http://233366.proxy.nscc-gz.cn:8888/?text=${text}&speaker=${speaker}&noise=${noise}&noisew=${noisew}&length=${1 / length}&format=${format}`)
+        node.setAttribute('src', `https://233366.proxy.nscc-gz.cn:8888/?text=${text}&speaker=${speaker}&noise=${noise}&noisew=${noisew}&length=${1 / length}&format=${format}`)
     }
 }
 
