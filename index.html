@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./Snipaste_2022-09-05_15-46-16.png">
+    <link rel="shortcut icon" href="./logo.png">
     <link rel="stylesheet" href="./index.css">
     <title>文本转原神语音</title>
 </head>
@@ -19,38 +19,35 @@
         </div>
     </div>
     <div class="container">
-        <textarea rows="15" class="input-box" value='' onchange="handleData('text',this.value)"
+        <textarea rows="15" class="input-box" value=''
             placeholder="请输入文本..."></textarea>
         <div class="options">
             <div class="option">
                 <span class="tag">角色</span>
-                <select onchange="handleData('speaker',this.value)" class="selector">
-                    <option value="神里绫华">神里绫华</option>
-                    <option value="派蒙">派蒙</option>
-                    <option value="钟离">钟离</option>
+                <select class="selector">
                 </select>
             </div>
             <div class="option">
                 <span class="tag">感情</span>
-                <input type="range" min="0" max="1" step="0.01" value='0.667' onchange="handleData('noise',this.value)"
-                    class="slide">
+                <input type="range" min="0" max="1" step="0.01" value='0.66'
+                    class="slide" name="noise">
                 <span class="param tag"></span>
             </div>
             <div class="option">
-                <span class="tag">音素发音长度</span>
-                <input type="range" min="0" max="1" step="0.01" value='0.8' onchange="handleData('noisew',this.value)"
-                    class="slide">
+                <span class="tag">音素长度</span>
+                <input type="range" min="0" max="1" step="0.01" value='0.8'
+                    class="slide" name="noisew">
                 <span class="param tag"></span>
             </div>
             <div class="option">
                 <span class="tag">语速</span>
-                <input type="range" min="0" max="2" step="0.01" value='1.2' onchange="handleData('length',this.value)"
-                    class="slide">
+                <input type="range" min="0" max="2" step="0.01" value='1.2'
+                    class="slide" name="length">
                 <span class="param tag"></span>
             </div>
             <div class="option">
                 <span class="tag">格式</span>
-                <select onchange="handleData('format',this.value)" class="selector">
+                <select class="selector">
                     <option value="mp3">mp3</option>
                     <option value="wav">wav</option>
                 </select>
@@ -68,7 +65,7 @@
                 <ul>
                     <li><span>输入框文本：</span>生成文本，支持常见标点符号，英文可能无法正常生成，数字请转换为对应的汉字再进行生成。</li>
                     <li><span>角色：</span>生成对应角色的语音。</li>
-                    <li><span>感情：</span>可用于控制感情变化程度，默认为0.667。</li>
+                    <li><span>感情：</span>可用于控制感情变化程度，默认为0.66。</li>
                     <li><span>音素发音长度：</span>可用于控制音节发音长度变化程度，默认为0.8。</li>
                     <li><span>语速：</span>默认为1.2。</li>
                     <li><span>生成语音格式：</span>必须为mp3或者wav。</li>
@@ -83,7 +80,8 @@
                 href="https://space.bilibili.com/174976202?spm_id_from=333.1007.0.0">Gin</a></span>
     </div>
     <!-- js -->
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/proxy.js"></script>
 </body>
 
 </html>
